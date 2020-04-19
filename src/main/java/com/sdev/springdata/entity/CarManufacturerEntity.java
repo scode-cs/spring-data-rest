@@ -48,7 +48,7 @@ public class CarManufacturerEntity implements Serializable {
 	@Column(name = "HEADQUARTER")
 	private String headquarter;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "manufacturer")
 	private List<CarModelEntity> models;
 
 	@CreatedDate
