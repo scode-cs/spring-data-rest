@@ -1,0 +1,46 @@
+server:
+  port: 9095
+  
+spring:
+  application:
+    name: spring-data-rest
+    
+  h2:
+    console:
+      enabled: true
+    
+  data:
+    rest:
+      base-path: /api/repository
+      default-page-size: 10
+      page-param-name: pageIndex
+      limit-param-name: perPage
+    
+  datasource:
+    platform: h2
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 5
+    
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate: 
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+    
+        
+  flyway:
+    enabled: true
+    url: jdbc:h2:mem:testdb
+    user: sa
+    password: 
+    baseline-on-migrate: true
+    locations: classpath:db/migration
