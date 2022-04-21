@@ -18,7 +18,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<start-class>com.sdev.springdata.application.DataRestApplication</start-class>
-		<swagger.version>3.0.0-SNAPSHOT</swagger.version>
+		<springdoc.version>1.6.7</springdoc.version>
 	</properties>
 
 	<dependencies>
@@ -54,19 +54,19 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.6.7</version>
+			<version>${springdoc.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-hateoas</artifactId>
-			<version>1.6.7</version>
+			<version>${springdoc.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-data-rest</artifactId>
-			<version>1.6.7</version>
+			<version>${springdoc.version}</version>
 		</dependency>
 
 		<dependency>
