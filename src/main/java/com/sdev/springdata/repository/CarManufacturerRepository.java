@@ -13,12 +13,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
         exported = true)
 public interface CarManufacturerRepository extends PagingAndSortingRepository<CarManufacturerEntity, Long> {
 
-
-    @Tag(name = "All Manufacturers")
-    @Override
-    @RestResource(exported = false)
-    Iterable<CarManufacturerEntity> findAll();
-
     @Override
     @RestResource(exported = false)
     void delete(CarManufacturerEntity entity);
